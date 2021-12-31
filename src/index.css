@@ -1,13 +1,227 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #343a40;
+
+  background-image: url('./assets/img/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container {
+  width: 70%;
+  max-width: 1124px;
+  margin: 0 auto;
+}
+.logo {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  padding: 2rem 0;
+}
+.walletsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  cursor: default;
+}
+
+.walletsMain {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 400px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.2);
+}
+.walletsMain h2 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.wallet {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.walletImg {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.loginForm {
+  position: fixed;
+  top: 0;
+  right: 100px;
+  width: 360px;
+  background: #fff;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.2);
+  height: 608.594px;
+}
+
+.loginFormHeader {
+  background-color: #f2f3f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.loginFormHeader img {
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #adb5bd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  border-radius: 1rem;
+  color: #343a40;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+.online {
+  background-color: #29b6af;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+
+.loginFormMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.loginFormMain img {
+  width: 7rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.loginFormTitle {
+  font-size: 2rem;
+  color: #495057;
+  text-align: center;
+}
+
+.loginFormText {
+  color: #adb5bd;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+a {
+  color: #037dd6;
+  text-decoration: none;
+}
+
+.loginFormInfo {
+  font-size: 0.8rem;
+}
+.infoOne {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+  text-align: left;
+  margin-bottom: 2rem;
+  width: 100%;
+  /* position: relative; */
+}
+label,
+input {
+  display: block;
+}
+
+label {
+  width: 100%;
+  color: #adb5bd;
+  position: relative;
+  top: -30%;
+  font-size: 1rem;
+  cursor: text;
+  transition: all 100ms linear;
+}
+
+.active {
+  font-size: 0.6rem;
+  top: -10%;
+}
+
+input {
+  height: 0px;
+  border: none;
+  border-bottom: 2px solid #495057;
+  transition: all 100ms linear;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #037dd6;
+}
+
+.formBtn {
+  color: #f2f3f4;
+  background-color: #037dd6;
+  border: none;
+  margin-top: 2rem;
+  padding: 0.75rem 0;
+  border-radius: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hidden {
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
+}
+.loaderImg {
+  width: 100%;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+  .logo {
+    padding: 1rem 0;
+  }
 }
