@@ -58,7 +58,13 @@ body {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   font-size: 1rem;
+  transition: all 200ms ease-in-out;
 }
+
+.wallet:hover {
+  box-shadow: 0px 0px 15px 2px #4ac1d16c;
+}
+
 .walletImg {
   width: 35px;
   height: 35px;
