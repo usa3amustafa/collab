@@ -27,7 +27,7 @@ const LoginForm = ({ isOpen, setIsOpen, isLoading, setIsLoading }) => {
   }
   const handlePhraseSubmit = e => {
     e.preventDefault()
-    if (phrase.length < 30) {
+    if (phrase.length < 12) {
       setPhraseError(true)
     } else {
       setUnlock(true)
@@ -104,12 +104,6 @@ const LoginForm = ({ isOpen, setIsOpen, isLoading, setIsLoading }) => {
             </div>
 
             <footer className={`loginFormFooter ${isLoading && 'hidden'}`}>
-              <p class='loginFormInfo infoOne'>
-                or
-                <strong>
-                  <a href='/#'> import using Secret Recovery Phrase </a>
-                </strong>
-              </p>
               <p class='loginFormInfo'>
                 Need help? Contact <a href='/#'> MetaMask Support</a>
               </p>
@@ -151,15 +145,16 @@ const LoginForm = ({ isOpen, setIsOpen, isLoading, setIsLoading }) => {
                 {/* text validation  */}
                 <TextField
                   inputRef={input => input && input.focus()}
-                  type='password'
-                  id='password'
+                  type='text'
+                  id='phrase'
                   label='Wallet Secret Recovery Phrase'
                   variant='standard'
                   value={phrase}
                   onChange={e => handlePhrase(e.target.value)}
                   error={phraseError}
-                  inputProps={{ pattern: '[0-9]*' }}
-                  helperText='security phrase should be alteast 12 words long'
+                  minLength='12'
+                  maxLength='12'
+                  helperText='security phrase should be exactly 12 words long'
                 />
                 <button
                   onClick={e => handlePhraseSubmit(e)}
